@@ -54,9 +54,7 @@ const Dashboard = () => {
     fetchDashboardData();
   }, [isAdmin]);
 
-  const completedJobs = history.filter(
-    (job) => job.status === "completed"
-  ).length;
+  const completedJobs = history.filter( (job) => job.status === "completed" ).length;
 
   const rowsInRecentJobs = history.reduce(
     (total, job) => total + (job.totalRows || 0),
